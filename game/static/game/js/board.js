@@ -2060,8 +2060,8 @@
                     document.querySelector(
                         '.modal.show, [role="dialog"]:not([hidden]), .promo-overlay.active'
                     ) ||
-                    shareModal?.style.display === 'flex' ||
-                    rulebookModal?.style.display === 'flex';
+                    (shareModal?.style.display && shareModal.style.display !== 'none') ||
+                    (rulebookModal?.style.display && rulebookModal.style.display !== 'none');
 
             // Allow Escape to close overlays
             if (hasBlockingOverlay && key !== 'escape') {
